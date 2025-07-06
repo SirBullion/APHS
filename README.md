@@ -1,4 +1,4 @@
-# All People Holistic Approach Pty Ltd — Community Support Website
+# All People Holistic Support Pty Ltd — Community Support Website
 
 Welcome to the official website for **All People Holistic Support Pty Ltd**, an Aboriginal-owned and culturally grounded NDIS, Liaison and youth service provider based in the Northern Territory, Australia.
 
@@ -24,7 +24,7 @@ Once deployed, the site will be live at:
 https://<SirBullion>.github.io/APHS-website/
 ```
 
-> Replace `<your-username>` with your actual GitHub name.
+.
 
 ## 🛠️ How to Use
 To edit or update the site:
