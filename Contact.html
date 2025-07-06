@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - All People Holistic Support</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html">
+        <img src="logo.png" alt="All People Holistic Support Logo" class="logo">
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="careers.html">Work With Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <h1>Contact Us</h1>
+      <p>If you have questions, need support, or want to refer someone, please get in touch using the form below or the contact details provided.</p>
+
+      <form class="contact-form" action="https://formspree.io/f/mwpbzdal" method="POST">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10,15}" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+
+      <div class="contact-details">
+        <h3>Other Ways to Reach Us</h3>
+        <p>Email: <a href="mailto:info@allpeople.org.au">info@allpeople.org.au</a></p>
+        <p>Phone: (08) XXXX XXXX</p>
+        <p>Location: Remote NT, including Adelaide River, Maningrida, and Arnhem Land</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 All People Holistic Support. ABN Registered. Serving Country, Community, and Culture.</p>
+      <p class="acknowledgement">We acknowledge the Traditional Custodians of the lands we work on and pay our respects to Elders past, present and emerging.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('.contact-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      if (!name || !email || !phone || !message) {
+        alert('Please fill out all fields before submitting.');
+        return;
+      }
+
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      const phoneRegex = /^[0-9]{10,15}$/;
+
+      if (!emailRegex.test(email)) {
+        alert('Please enter a valid email address.');
+        return;
+      }
+
+      if (!phoneRegex.test(phone)) {
+        alert('Please enter a valid phone number.');
+        return;
+      }
+
+      alert('Thank you for contacting us. We’ll get back to you shortly.');
+      this.submit();
+    });
+  </script>
+</body>
+</html>
+
+
